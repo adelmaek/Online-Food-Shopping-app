@@ -1,0 +1,27 @@
+<div calss = "row  " style = "margin-top:10px;">
+    <div class = "col-xl">
+        <button class ="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<div class = "row  " style = "margin-top:10px;">
+    <div class="col-xl-12 ">
+        <a 
+        href = "#" 
+        class="list-group-item clearfix" 
+        *ngFor="let myrecipe of Recipes">
+            <div class="pull-right">
+                <div class="row">
+                    <div class="col-4  justify-content-center ">
+                        <h4 class = "list-group-item-heading text-dark">{{myrecipe.name}}</h4>
+                        <p class="list-group-item-text text-dark">{{myrecipe.description}}</p>
+                    </div>
+                    <div class= "col-8  justify-content-center ">
+                        <span>
+                        <img src={{myrecipe.imagePath}} alt="{{myrecipe.name}}" class="img-responsive rounded float-right rounded-circle" style="height: 100px; width:100px;" >
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
